@@ -6,5 +6,6 @@ sentence-transformers
 scikit-learn
 numpy
 pandas
-crewai
 groq
+crewai
+openai>=1.13.3
