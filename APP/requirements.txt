@@ -6,3 +6,5 @@ sentence-transformers
 scikit-learn
 numpy
 pandas
+crewai
+groq
