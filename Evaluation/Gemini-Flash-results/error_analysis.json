@@ -1,0 +1,229 @@
+{
+  "run_timestamp": "20260501_163517",
+  "total_errors": 17,
+  "total_unknowns": 0,
+  "error_categories": [
+    {
+      "scenario_id": "SC-0002",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "urinary burning and frequency",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient presents with dysuria and increased urinary frequency, which are common symptoms of a urinary tract infection (UTI) [1]. Although the patient denies fever, chills, or back pain, which coul"
+    },
+    {
+      "scenario_id": "SC-0015",
+      "ground_truth": "Self-care",
+      "prediction": "Routine",
+      "primary_complaint": "tired after workouts",
+      "category": "HALLUCINATION",
+      "reasoning": "The patient's son is experiencing tiredness after a new exercise routine and sounded panicky, which could be a symptom of a panic attack [5]. While he denies chest pain, which is a red flag for cardia"
+    },
+    {
+      "scenario_id": "SC-0020",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "persistent fatigue",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient is experiencing unusual tiredness despite adequate sleep, which is interfering with their ability to focus at work. This symptom, particularly when persistent and impacting daily activitie"
+    },
+    {
+      "scenario_id": "SC-0032",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "racing heart",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient is experiencing a racing heart feeling, described as their heart pounding really fast, which aligns with the description of heart palpitations [4]. While the patient denies chest pain or d"
+    },
+    {
+      "scenario_id": "SC-0035",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "depressed mood and anhedonia",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient reports feeling down for six weeks, experiencing anhedonia, low energy, poor sleep, and difficulty concentrating, all of which are significant symptoms impacting daily life [4]. While the "
+    },
+    {
+      "scenario_id": "SC-0053",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "depressed mood and anhedonia",
+      "category": "HALLUCINATION",
+      "reasoning": "The patient's daughter has been experiencing symptoms consistent with depression for six weeks, including persistent sadness, anhedonia (loss of interest in previously enjoyed activities), and sleep d"
+    },
+    {
+      "scenario_id": "SC-0056",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "urinary burning and frequency",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient presents with dysuria and increased urinary frequency, which are common symptoms of a urinary tract infection (UTI) [1]. While the patient denies fever, chills, or back pain, which could i"
+    },
+    {
+      "scenario_id": "SC-0065",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "occasional racing heart",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient's father is experiencing new episodes of a racing, pounding heart that resolve spontaneously, accompanied by anxiety. While panic attacks can cause similar symptoms like a pounding heart a"
+    },
+    {
+      "scenario_id": "SC-0068",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "excessive worry and restlessness",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient's father has been experiencing restlessness, constant worrying, and difficulty concentrating for ten days, which is significantly impacting his work performance [1], [5]. These symptoms su"
+    },
+    {
+      "scenario_id": "SC-0072",
+      "ground_truth": "Self-care",
+      "prediction": "Routine",
+      "primary_complaint": "difficulty falling asleep",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient's daughter is experiencing difficulty falling asleep, a common symptom of insomnia, which has been ongoing for several months [2, 3]. While she reports feeling fine during the day and it's"
+    },
+    {
+      "scenario_id": "SC-0074",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "urinary burning and frequency",
+      "category": "HALLUCINATION",
+      "reasoning": "The patient's son is experiencing dysuria and increased urinary frequency, which are common symptoms of a urinary tract infection (UTI) or potentially a kidney infection [1]. Although he has no fever "
+    },
+    {
+      "scenario_id": "SC-0080",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "urinary burning and frequency",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient presents with dysuria and increased urinary frequency, including nocturia, which are classic symptoms of a urinary tract infection (UTI) [1]. While the patient denies fever or back pain, w"
+    },
+    {
+      "scenario_id": "SC-0081",
+      "ground_truth": "Self-care",
+      "prediction": "Routine",
+      "primary_complaint": "mild sunburn on shoulders",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient's son has symptoms of a sunburn, including redness, tenderness, and stinging, which are consistent with typical sunburn symptoms [1]. While the symptoms have persisted for a week, there ar"
+    },
+    {
+      "scenario_id": "SC-0123",
+      "ground_truth": "Self-care",
+      "prediction": "Routine",
+      "primary_complaint": "sneezing and itchy eyes",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient's son is experiencing symptoms consistent with hay fever, including sneezing, red and itchy eyes, and discomfort, which typically occur during pollen season [1]. While the child is uncomfo"
+    },
+    {
+      "scenario_id": "SC-0129",
+      "ground_truth": "Self-care",
+      "prediction": "Routine",
+      "primary_complaint": "bloating and one loose stool",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient presents with bloating and a single loose stool after a rich meal, which could suggest a mild digestive upset rather than a severe condition. While symptoms like bloating and changes in bo"
+    },
+    {
+      "scenario_id": "SC-0131",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "mild dizziness on new ACE inhibitor",
+      "category": "HALLUCINATION",
+      "reasoning": "The patient's father is experiencing lightheadedness and dizziness, particularly when standing up, which are symptoms consistent with orthostatic hypotension, a known side effect of Lisinopril [2]. Wh"
+    },
+    {
+      "scenario_id": "SC-0134",
+      "ground_truth": "Routine",
+      "prediction": "Urgent",
+      "primary_complaint": "occasional racing heart",
+      "category": "AMBIGUOUS",
+      "reasoning": "The patient is experiencing episodes of a racing heart, which are described as heart palpitations [1], [3]. While the patient denies chest pain, lightheadedness, or fainting, the sudden onset and recu"
+    }
+  ],
+  "safety_errors": [
+    {
+      "System": "S1_Raw_LLM",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 0,
+      "Total_Safety_Errors": 0,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "S2_RAG_Only",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 0,
+      "Total_Safety_Errors": 0,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "S3_BM25_Only",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 0,
+      "Total_Safety_Errors": 0,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "S4_Hybrid_RAG",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 1,
+      "Total_Safety_Errors": 1,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "S5_LLM_Gate",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 0,
+      "Total_Safety_Errors": 0,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "S6_Gate_Evaluator",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 1,
+      "Total_Safety_Errors": 1,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "S7_Full_Hybrid",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 0,
+      "Total_Safety_Errors": 0,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "A1_Full_no_Dense",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 4,
+      "Total_Safety_Errors": 4,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "A2_Full_no_BM25",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 2,
+      "Total_Safety_Errors": 2,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "A3_Full_no_Eval",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 1,
+      "Total_Safety_Errors": 1,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "A4_Full_topk3",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 4,
+      "Total_Safety_Errors": 4,
+      "Downgrade_Rate": 0.0
+    },
+    {
+      "System": "A5_Full_topk10",
+      "Critical_Downgrades": 0,
+      "Overcautious_Upgrades": 3,
+      "Total_Safety_Errors": 3,
+      "Downgrade_Rate": 0.0
+    }
+  ]
+}

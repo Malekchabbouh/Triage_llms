@@ -1,0 +1,180 @@
+Evaluation Run: 20260501_163517
+Seed: 42
+Config: {
+  "model": "gemini-2.5-flash",
+  "temperature": 0.0,
+  "max_tokens": 1200,
+  "thinking_budget": 0,
+  "retrieval_k": 5,
+  "dense_weight": 0.7,
+  "bm25_weight": 0.3,
+  "min_hybrid": 0.15,
+  "max_retries": 3,
+  "retry_delay": 5,
+  "rate_limit": 1.5,
+  "seed": 42,
+  "embed_model": "all-MiniLM-L6-v2"
+}
+
+============================================================
+STATISTICAL SIGNIFICANCE vs FULL HYBRID
+============================================================
+           System      Acc  Full_Acc     Δ_Acc    McNemar_p Acc_Sig_0.05  Latency_Mean  Full_Lat   Wilcoxon_p Lat_Sig_0.05
+       S1_Raw_LLM 0.926667  0.886667  0.040000 7.709987e-02           No      1.497373  4.536808 2.492132e-26         Yes*
+      S2_RAG_Only 0.873333  0.886667 -0.013333 7.236736e-01           No      1.966442  4.536808 2.762897e-25         Yes*
+     S3_BM25_Only 0.906667  0.886667  0.020000 5.464936e-01           No      1.837757  4.536808 2.299606e-26         Yes*
+    S4_Hybrid_RAG 0.873333  0.886667 -0.013333 4.795001e-01           No      1.882573  4.536808 2.299606e-26         Yes*
+      S5_LLM_Gate 0.926667  0.886667  0.040000 7.709987e-02           No      2.069099  4.536808 2.442552e-26         Yes*
+S6_Gate_Evaluator 0.760000  0.886667 -0.126667 1.745500e-04         Yes*      3.538358  4.536808 2.083921e-19         Yes*
+ A1_Full_no_Dense 0.726667  0.886667 -0.160000 2.667955e-06         Yes*      3.852092  4.536808 6.270813e-06         Yes*
+  A2_Full_no_BM25 0.740000  0.886667 -0.146667 1.814228e-05         Yes*      3.982977  4.536808 2.600359e-02         Yes*
+  A3_Full_no_Eval 0.873333  0.886667 -0.013333 4.795001e-01           No      2.491202  4.536808 2.299606e-26         Yes*
+    A4_Full_topk3 0.706667  0.886667 -0.180000 3.015843e-06         Yes*      3.930733  4.536808 8.415077e-04         Yes*
+   A5_Full_topk10 0.693333  0.886667 -0.193333 4.931769e-07         Yes*      4.238567  4.536808 4.846150e-01           No
+
+============================================================
+ABLATION DELTAS
+============================================================
+  Condition  Accuracy     Δ Acc     F1_W      Δ F1  F1_Macro  Latency  Δ Latency  Unknown%
+Full System  0.886667  0.000000 0.885810  0.000000  0.885810 4.536808   0.000000       0.0
+− Dense RAG  0.726667 -0.160000 0.714051 -0.171759  0.714051 3.852092  -0.684716       0.0
+     − BM25  0.740000 -0.146667 0.723863 -0.161947  0.723863 3.982977  -0.553831       0.0
+− Evaluator  0.873333 -0.013333 0.872570 -0.013240  0.872570 2.491202  -2.045606       0.0
+  top-k = 3  0.706667 -0.180000 0.690872 -0.194938  0.690872 3.930733  -0.606076       0.0
+ top-k = 10  0.693333 -0.193333 0.675809 -0.210001  0.675809 4.238567  -0.298241       0.0
+
+============================================================
+CLASSIFICATION REPORTS
+============================================================
+
+--- S1_Raw_LLM ---
+              precision    recall  f1-score   support
+
+     Routine       0.91      0.86      0.89        50
+   Self-care       1.00      0.92      0.96        50
+      Urgent       0.88      1.00      0.93        50
+
+    accuracy                           0.93       150
+   macro avg       0.93      0.93      0.93       150
+weighted avg       0.93      0.93      0.93       150
+
+--- S2_RAG_Only ---
+              precision    recall  f1-score   support
+
+     Routine       0.88      0.72      0.79        50
+   Self-care       0.98      0.90      0.94        50
+      Urgent       0.79      1.00      0.88        50
+
+    accuracy                           0.87       150
+   macro avg       0.88      0.87      0.87       150
+weighted avg       0.88      0.87      0.87       150
+
+--- S3_BM25_Only ---
+              precision    recall  f1-score   support
+
+     Routine       0.86      0.86      0.86        50
+   Self-care       0.98      0.86      0.91        50
+      Urgent       0.89      1.00      0.94        50
+
+    accuracy                           0.91       150
+   macro avg       0.91      0.91      0.91       150
+weighted avg       0.91      0.91      0.91       150
+
+--- S4_Hybrid_RAG ---
+              precision    recall  f1-score   support
+
+     Routine       0.88      0.74      0.80        50
+   Self-care       1.00      0.88      0.94        50
+      Urgent       0.78      1.00      0.88        50
+
+    accuracy                           0.87       150
+   macro avg       0.89      0.87      0.87       150
+weighted avg       0.89      0.87      0.87       150
+
+--- S5_LLM_Gate ---
+              precision    recall  f1-score   support
+
+     Routine       0.91      0.86      0.89        50
+   Self-care       1.00      0.92      0.96        50
+      Urgent       0.88      1.00      0.93        50
+
+    accuracy                           0.93       150
+   macro avg       0.93      0.93      0.93       150
+weighted avg       0.93      0.93      0.93       150
+
+--- S6_Gate_Evaluator ---
+              precision    recall  f1-score   support
+
+     Routine       0.78      0.42      0.55        50
+   Self-care       1.00      0.86      0.92        50
+      Urgent       0.62      1.00      0.77        50
+
+    accuracy                           0.76       150
+   macro avg       0.80      0.76      0.75       150
+weighted avg       0.80      0.76      0.75       150
+
+--- S7_Full_Hybrid ---
+              precision    recall  f1-score   support
+
+     Routine       0.88      0.76      0.82        50
+   Self-care       1.00      0.90      0.95        50
+      Urgent       0.81      1.00      0.89        50
+
+    accuracy                           0.89       150
+   macro avg       0.90      0.89      0.89       150
+weighted avg       0.90      0.89      0.89       150
+
+--- A1_Full_no_Dense ---
+              precision    recall  f1-score   support
+
+     Routine       0.74      0.40      0.52        50
+   Self-care       1.00      0.78      0.88        50
+      Urgent       0.60      1.00      0.75        50
+
+    accuracy                           0.73       150
+   macro avg       0.78      0.73      0.71       150
+weighted avg       0.78      0.73      0.71       150
+
+--- A2_Full_no_BM25 ---
+              precision    recall  f1-score   support
+
+     Routine       0.76      0.38      0.51        50
+   Self-care       1.00      0.84      0.91        50
+      Urgent       0.60      1.00      0.75        50
+
+    accuracy                           0.74       150
+   macro avg       0.79      0.74      0.72       150
+weighted avg       0.79      0.74      0.72       150
+
+--- A3_Full_no_Eval ---
+              precision    recall  f1-score   support
+
+     Routine       0.88      0.74      0.80        50
+   Self-care       1.00      0.88      0.94        50
+      Urgent       0.78      1.00      0.88        50
+
+    accuracy                           0.87       150
+   macro avg       0.89      0.87      0.87       150
+weighted avg       0.89      0.87      0.87       150
+
+--- A4_Full_topk3 ---
+              precision    recall  f1-score   support
+
+     Routine       0.69      0.36      0.47        50
+   Self-care       1.00      0.76      0.86        50
+      Urgent       0.58      1.00      0.74        50
+
+    accuracy                           0.71       150
+   macro avg       0.76      0.71      0.69       150
+weighted avg       0.76      0.71      0.69       150
+
+--- A5_Full_topk10 ---
+              precision    recall  f1-score   support
+
+     Routine       0.63      0.34      0.44        50
+   Self-care       1.00      0.74      0.85        50
+      Urgent       0.58      1.00      0.74        50
+
+    accuracy                           0.69       150
+   macro avg       0.74      0.69      0.68       150
+weighted avg       0.74      0.69      0.68       150
