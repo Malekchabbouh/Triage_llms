@@ -1,11 +1,21 @@
 streamlit>=1.30
-google-genai
-rank-bm25
-openpyxl
-sentence-transformers
-scikit-learn
+
+# Core
 numpy
 pandas
+scikit-learn
+
+# RAG
+rank-bm25
+sentence-transformers
+
+# Files
+openpyxl
+
+# LLM
 groq
-crewai
-openai>=1.13.3
+
+# CrewAI (stable combo)
+crewai==0.28.8
+openai==1.30.1
+pydantic==2.7.1
