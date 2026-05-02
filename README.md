@@ -1,5 +1,15 @@
 # Triage HIL — Streamlit App
 
+## Project Structure
+- `APP/` → Main application (final working system)
+- `Embeddings/` → Reference materials used during development (not required to run)
+- `Evaluation/` → Evaluation scripts and experiments (for analysis only)
+
+Note:
+The **final database and runnable system are already inside the `APP` folder**.  
+You only need the `APP` folder to run the project.
+
+---
 ## Setup
 ```bash
 pip install -r requirements.txt
@@ -37,7 +47,7 @@ streamlit run app_final.py
 
 # Windows PowerShell
 $env:GROQ_API_KEY = "gsk_your-key-here"
-streamlit run app_final.py
+streamlit run app_creawai.py
 ```
 
 Alternative (Gemini - legacy support):
